@@ -1,0 +1,15 @@
+# rewrite rules
+domain blog.example.io {
+  # rewrite / to 8001;
+  location / {
+    proxy_pass http://127.0.0.1:8001/;
+  }
+
+  # static files
+  location /static/ {
+    alias ./public/;
+
+    set_header server hiproxy;
+    set_cookie server hiproxy;
+  }
+}

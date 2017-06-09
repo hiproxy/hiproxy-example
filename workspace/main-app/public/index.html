@@ -52,6 +52,23 @@
     <h3>hosts</h3>
     <pre>127.0.0.1:8001 blog.example.com</pre>
 
+    <h3>rewrite</h3>
+    <pre># rewrite rules
+domain blog.example.io {
+  # rewrite / to 8001;
+  location / {
+    proxy_pass http://127.0.0.1:8001/;
+  }
+
+  # static files
+  location /static/ {
+    alias ./public/;
+
+    set_header server hiproxy;
+    set_cookie server hiproxy;
+  }
+}</pre>
+
 
     <!-- news list -->
     <h2>News List</h2>

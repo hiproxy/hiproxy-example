@@ -7,4 +7,4 @@ hiproxy example project - You can quickly experience hiproxy
 * Then start test service `npm start`
 * Follow the prompts
 
-<img src='https://github.com/hiproxy/hiproxy-example/raw/master/screen-shot.png' width='300px'/>
+<img src='https://github.com/hiproxy/hiproxy-example/raw/master/screen-shot.png'/>

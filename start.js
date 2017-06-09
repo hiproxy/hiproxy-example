@@ -22,6 +22,7 @@ console.log('News App started at: \t' + 'http://127.0.0.1:8002/'.underline.blue)
 console.log();
 
 console.log('How to experience hiproxy?\n');
+console.log('> step 0:'.bold.magenta, 'Install hiproxy', 'npm install -g hiproxy'.bold.green);
 console.log('> step 1:'.bold.magenta, 'Open a new Terminal tab.');
 console.log('> step 2:'.bold.magenta, 'Execute', 'cd workspace && hiproxy start --open --port 8008 --pac-proxy'.bold.green);
 console.log('> step 3:'.bold.magenta, 'Visit', 'http://www.example.com/'.underline.blue);

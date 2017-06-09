@@ -1,0 +1,15 @@
+h1 {
+  font-size: 30;
+  font-weight: 'bold';
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+pre {
+  background: lightgray;
+  border-radius: 3px;
+  white-space:pre-wrap;
+  padding: 10px;
+}

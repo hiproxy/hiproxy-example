@@ -1,12 +1,62 @@
 <html>
   <header>
     <title>hiproxy test page</title>
+    <link rel="stylesheet" href="/style.css">
   </header>
   <body>
     <h1>Welcome to experience hiproxy</h1>
 
+    <p>
+      There are three items in this repository: <strong>blog-app</strong>, 
+      <strong>news-app</strong> and <strong>main-app</strong>. And this is the <strong>main-app</strong>.
+    </p>
+
+    <p>
+      Each project has its own hosts file and rewrite configuration file. The config content and links is as follows:
+    </p>
+
+    <!-- main -->
+    <h2>Main App</h2>
+
+    <h3>Links</h3>
+    <ul>
+      <li>
+        <a href="http://www.example.com/">Home Page</a>
+      </li>
+      <li>
+        <a href="http://www.example.com/page-1">Page 1</a>
+      </li>
+      <li>
+        <a href="http://www.example.com/page-2">Page 2</a>
+      </li>
+    </ul>
+
+    <h3>hosts</h3>
+    <pre>127.0.0.1:8000 www.example.com</pre>
+
+    <!-- blog posts -->
+    <h2>Blog Posts</h2>
+    <h3>Links</h3>
+    <ul>
+      <li>
+        <a href="http://blog.example.com/hello-world">hello world</a>
+      </li>
+      <li>
+        <a href="http://blog.example.com/blog-1">blog 1</a>
+      </li>
+      <li>
+        <a href="http://blog.example.com/blog-2">blog 2</a>
+      </li>
+    </ul>
+
+    <h3>hosts</h3>
+    <pre>127.0.0.1:8001 blog.example.com</pre>
+
+
     <!-- news list -->
     <h2>News List</h2>
+
+    <h3>Links</h3>
     <ul>
       <li>
         <a href="http://news.example.com/hello-world">Hello World</a>
@@ -19,18 +69,7 @@
       </li>
     </ul>
 
-    <!-- blog posts -->
-    <h2>Blog Posts</h2>
-    <ul>
-      <li>
-        <a href="http://blog.example.com/hello-world">hello world</a>
-      </li>
-      <li>
-        <a href="http://blog.example.com/blog-1">blog 1</a>
-      </li>
-      <li>
-        <a href="http://blog.example.com/blog-2">blog 2</a>
-      </li>
-    </ul>
+    <h3>hosts</h3>
+    <pre>127.0.0.1:8002 news.example.com</pre>
   </body>
 </html>

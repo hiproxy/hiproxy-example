@@ -1,9 +1,22 @@
 # rewrite rules
+# for https test
 domain www.example.io {
   # rewrite / to 8000;
   
   location / {
     proxy_pass http://127.0.0.1:8000/;
+    set_header Access-Control-Allow-Origin *;
+  }
+
+  location /echo {
+    echo <h1>hello_echo</h1>;
+    echo <p>test echo directive</p>;
+    echo <div>
+    echo   <span>div &gt; span</span>
+    echo </div>
+    echo <p>finish</p>;
+    
+    # proxy_pass http://127.0.0.1:8000/;
   }
 
   # static files
@@ -11,6 +24,5 @@ domain www.example.io {
     alias ./public/;
 
     set_header server hiproxy;
-    set_cookie server hiproxy;
   }
 }

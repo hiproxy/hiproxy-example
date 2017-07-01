@@ -18,6 +18,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(function (req, res, next) {
+  console.log('[access]'.bold.green, req.method, req.url.underline, JSON.stringify(req.headers));
+  console.log();
+  next();
+});
+
 app.get('/', function (req, res, next) {
   res.end('News App Home Page');
 });

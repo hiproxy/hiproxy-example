@@ -9,6 +9,7 @@ domain www.example.io {
   }
 
   location /echo {
+    echo <div>current page url: $uri</div>;
     echo <h1>hello_echo</h1>;
     echo <p>test echo directive</p>;
     echo <div>
@@ -17,6 +18,14 @@ domain www.example.io {
     echo <p>finish</p>;
     
     # proxy_pass http://127.0.0.1:8000/;
+  }
+
+  location /file {
+    send_file ./public/$query_string;
+  }
+
+  location ~ /\/file\/(.*)/ {
+    send_file ./$1;
   }
 
   # static files

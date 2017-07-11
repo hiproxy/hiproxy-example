@@ -3,6 +3,8 @@ domain blog.example.io {
   # rewrite / to 8001;
   location / {
     proxy_pass http://127.0.0.1:8001/;
+    set_cookie server hiproxy;
+    set_cookie server-version 2.0.0-dev.2;
   }
 
   # static files

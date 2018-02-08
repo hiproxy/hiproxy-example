@@ -11,7 +11,6 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 app.use(function (req, res, next) {
   res.setHeader('APP-NAME', 'image-app');
@@ -23,6 +22,8 @@ app.use(function (req, res, next) {
   console.log();
   next();
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res, next) {
   res.end('Main App Home Page');
